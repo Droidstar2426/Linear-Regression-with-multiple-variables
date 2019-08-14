@@ -1,7 +1,7 @@
-x=load('testdata1.txt');
+x=load('testdata1.txt');% upload the training data
 n=size(x,2)-1;
-x1=x(:,1:n);
-y=x(:,11);
+x1=x(:,1:end-1);% can use 1:n
+y=x(:,end);
 normalization=true;
 if(normalization)
     for i=1:n
